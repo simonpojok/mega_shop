@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "shop.apps.ShopConfig",
     "cart.apps.CartConfig",
-    "orders.apps.OrdersConfig"
+    "orders.apps.OrdersConfig",
+    'payment.apps.PaymentConfig'
 ]
 
 MIDDLEWARE = [
@@ -115,6 +116,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
 STATIC_URL = "static/"
+STATIC_ROOT = BASE_DIR / 'static'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
@@ -129,3 +131,4 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 STRIPE_PUBLISHABLE_KEY = 'pk_test_51OtbwZJo87hxM7IPRJOTwWt7mJn4vanljwEsX54Vt6qCxuN73HsczJzLjF9lBPdliJcNArRlDHh05aPe12LPlPyi00zHiQ993y'
 STRIPE_SECRET_KEY = 'sk_test_51OtbwZJo87hxM7IPbi85YbNDlyIe5q1rtoNQECPBh9XNp6VMeJ2vW0wEXiG9eHyqF9WBEfSfik4bD0eIpGEtMhPa00DXr7bHQr'
 STRIPE_API_VERSION = '2022-08-01'
+STRIPE_WEBHOOK_SECRET = 'whsec_c0fb7e39067ce233e8158b855e595ac9af83431e2052abed91e294cb31facd76'
